@@ -128,32 +128,22 @@ class ucontroller extends Controller
             'pass' => 'required',
 
         ]);
-        
-        $getemail=$request -> input('uname');
-        $getpass=$request -> input('pass');
-        $data = DB::select('select id from ulogins where uname=? and pass=?',[$getemail,$getpass]);
-        
+        $userinfo2 = ulogin::where([['uname',$request->uname],['pass',$request->pass]])->first();
+        if($request->uname=='admin' && $request->pass=='admin')
+            {
+                $request-> session()->put('uname','admin');
+                return redirect('/ah');
 
-        if(count($data))
-        {
-            $dat= $request -> input();
-            $request-> session()->put('uname', $dat['uname']);
-            return view('uhome');
-           
-        }
-        else if($getemail=='admin'&& $getpass=='admin')
-        {
-            $request-> session()->put('uname', 'admin');
-
-            return view('adminhome');
-            
-        }
-        else
-        {
-
-            return back()->withInput();
-
-        }
+            }
+            else if($userinfo2)
+            {
+                $request->session()->put('uname',$userinfo2->uname);
+                        $request->session()->put('unamesid',$userinfo2->unamesid);
+                        return redirect('/uh');
+            }
+            else{
+                return back()->with('fail','Invalid Credentials !');
+            }
 
     }
 
