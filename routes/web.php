@@ -41,6 +41,8 @@ Route::get('/edit/{pid}',[pcontroller::class,'edit']);
 Route::get('/delete/{id}',[pcontroller::class,'deleteview']);
 Route::get('/cartadd/{pid}',[pcontroller::class,'cartadd']);
 route::get('/order/{id}/edit', [pcontroller::class,'orderedit']);
+Route::get('/vieworders',[pcontroller::class , 'vieworders' ] );
+
 
 
 
@@ -64,7 +66,6 @@ Route::get('/userview',[pcontroller::class , 'usrview' ] );
 Route::get('/cartlist',[pcontroller::class , 'cartlist' ] );
 Route::get('ordernow',[pcontroller::class , 'ordernow' ] );
 Route::get('/myorders',[pcontroller::class,'myorder']);
-Route::get('/vieworders',[pcontroller::class , 'vieworders' ] );
 
 
     
