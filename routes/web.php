@@ -42,8 +42,6 @@ Route::get('/delete/{id}',[pcontroller::class,'deleteview']);
 Route::get('/cartadd/{pid}',[pcontroller::class,'cartadd']);
 route::get('/order/{id}/edit', [pcontroller::class,'orderedit']);
 Route::get('/vieworders',[pcontroller::class , 'vieworders' ] );
-Route::get('/pv',[pcontroller::class,'prodview']);
-
 
 
 
@@ -62,6 +60,7 @@ Route::group(['middleware'=>['AuthCheck']],function(){
     Route::get('/uc',[ucontroller::class , 'ucontact' ] );
     Route::get('/ah',[ucontroller::class , 'admin' ] );
     Route::get('/ap',[pcontroller::class , 'create' ] );
+    Route::get('/pv',[pcontroller::class,'prodview']);
 Route::get('/userview',[pcontroller::class , 'usrview' ] );
 
 Route::get('/cartlist',[pcontroller::class , 'cartlist' ] );
