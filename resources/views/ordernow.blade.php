@@ -79,7 +79,7 @@
   <form action="/orderplace" method="post">
       {{csrf_field()}}
   <div class="form-group">
-    <textarea  name="address" class="form-control" placeholder="Enter your address and mobile number"></textarea>
+    <textarea  name="address" class="form-control" placeholder="Enter your address and mobile number" required></textarea>
   </div>
   <div class="form-group">
     <label  for="pwd" >Payment Method</label><br><br>
