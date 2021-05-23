@@ -83,9 +83,9 @@
   </div>
   <div class="form-group">
     <label  for="pwd" >Payment Method</label><br><br>
-    <input type="radio" value="card" name="payment"><span>Debit/Credit card</span><br><br>
+    <input type="radio" value="card" name="payment" required><span>Debit/Credit card</span><br><br>
   
-    <input type="radio" value="cod" name="payment" ><span> Cash On delivery</span><br><br>
+    <input type="radio" value="cod" name="payment" required ><span> Cash On delivery</span><br><br>
   <button type="submit" class="btn btn-primary">Order Now</button>
 </form>
   </div></div>
