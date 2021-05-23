@@ -41,7 +41,7 @@
             </ul>
             <form class="d-flex">
 
-              <a href="/logout" class="btn btn-primary">Logout</a>
+              <a href="/logout" class="btn btn-primary">Logout </a>
 
             </form>
           </div>
