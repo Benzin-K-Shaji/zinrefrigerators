@@ -66,7 +66,7 @@
         <td >300</td>
       </tr>
       <tr>
-        <td >Delivery Charge</td>
+        <td >Delivery Charge </td>
         <td >50</td>
       </tr>
       <tr>
