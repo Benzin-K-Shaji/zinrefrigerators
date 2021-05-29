@@ -56,7 +56,7 @@
  </div>
  <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ">
  
- <table class="table  table-success table-striped">
+ <table class="table  table-success table-striped"style="display: block;overflow-x: auto;white-space: nowrap;">
 <tr><th>Order Id</th>
     <th >product id</th>
     <th >user Name</th>
